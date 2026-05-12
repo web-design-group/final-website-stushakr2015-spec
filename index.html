@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Корзина — Чайный магазин</title>
+ <link rel="stylesheet" href="styles/styleindex.css">
+</head>
+<body>
+  <div class="page">
+    <!-- Шапка -->
+    <div class="header">
+            <div class="icon-img-btn">
+                <button class="special-icon-btn">
+                    <img src="images/чат 3.png" alt="icon-img-btn">
+                </button>
+    </div>
+        <div class="nav-links">
+            <button class="nav-link">КАТАЛОГ</button>
+            <button class="nav-link">УСЛУГИ</button>
+            <button class="nav-link">СОЦСЕТИ</button>
+            <button class="nav-link">О НАС</button>
+            <button class="nav-link">КОНТАКТЫ</button>
+        </div>
+
+        <!-- правый блок: 3 иконки + кнопка -->
+        <div class="right-group">
+            <div class="social-icons">
+                <button class="social-icon"><img src="images/rjhxth.png" alt="twitter"></button>
+                <button class="social-icon"><img src="images/Union.png" alt="facebook"></button>
+                <button class="social-icon"><img src="images/чат.png" alt="instagram"></button>
+            </div>
+            <div class="special-icon-wrapper">
+                <button class="special-icon-btn">
+                    <img src="images/логин1.png" alt="special icon">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Карточки товаров (корзина) — пролистываются по две вниз, с управлением -->
+    <div class="cart-section" id="cartSection">
+      <div class="cart-items-container" id="cartContainer">
+        <!-- карточки генерируются JS, но можно и статично для демонстрации -->
+      </div>
+      <!-- стрелки для добавления/удаления? по условию: "с возможностью удалить товар, добавить еще с помощью стрелки" 
+           интерпретируем как внутри карточки стрелки количества и кнопка удаления -->
+    </div>
+
+    <!-- Блок КОНТ.ДАННЫЕ -->
+    <div class="contacts-block">
+      <div class="contacts-title">КОНТ.ДАННЫЕ</div>
+      <div class="contact-field">
+        <input type="text" placeholder="ИМЯ И ФАМИЛИЯ" id="nameInput">
+      </div>
+      <div class="contact-field">
+        <input type="text" placeholder="КОНТАКТНЫЙ ТЕЛЕФОН" id="phoneInput">
+      </div>
+      <div class="contact-field">
+        <input type="email" placeholder="E-MAIL" id="emailInput">
+      </div>
+    </div>
+
+    <!-- Блок АДРЕС -->
+    <div class="address-block">
+      <div class="address-title">АДРЕС</div>
+      <div class="address-field">
+        <input type="text" placeholder="ВАШ АДРЕС" id="addressInput">
+      </div>
+    </div>
+
+    <!-- Блок Способы оплаты -->
+    <div class="payment-block">
+      <div class="payment-title">СПОСОБЫ ОПЛАТЫ</div>
+      <div class="payment-options" id="paymentOptions">
+        <div class="payment-option" data-value="online">
+          <div class="radio-circle" onclick="selectPayment(this)"></div>
+          <span class="payment-text">ОНЛАЙН ПО КАРТЕ</span>
+        </div>
+        <div class="payment-option" data-value="spb">
+          <div class="radio-circle" onclick="selectPayment(this)"></div>
+          <span class="payment-text">ЧЕРЕЗ СПБ</span>
+        </div>
+        <div class="payment-option" data-value="sberpay">
+          <div class="radio-circle" onclick="selectPayment(this)"></div>
+          <span class="payment-text">СБЕРПЕЙ</span>
+        </div>
+      </div>
+    </div>
+ </div>
+  
+    <!-- ВАШ ЗАКАЗ -->
+    <div class="order-summary">ВАШ ЗАКАЗ</div>
+    <div class="order-details">
+      <span>КОЛИЧЕСТВО:</span>
+      <span id="totalQuantity">2</span>
+    </div>
+    <div class="total-block">
+      <span>ИТОГО:</span>
+      <span id="totalPrice">1200 ₽</span>
+    </div>
+
+    <!-- Кнопка ОФОРМИТЬ -->
+    <button class="checkout-btn" id="checkoutButton">ОФОРМИТЬ</button>
+
+    <!-- Подвал -->
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h2 class="brand-title">ЧАЙНЫЙ ГРИМУАР</h2>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3 class="column-title">ПОСУДА</h3>
+                <ul class="footer-list">
+                    <li><a href="#">Чайники</a></li>
+                    <li><a href="#">Гайвани</a></li>
+                    <li><a href="#">Пиалы</a></li>
+                    <li><a href="#">Типоты</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="column-title">ДРУГОЕ</h3>
+                <ul class="footer-list">
+                    <li><a href="#">Чайные наборы</a></li>
+                    <li><a href="#">Мастер-классы</a></li>
+                    <li><a href="#">Чайные церемонии</a></li>
+                    <li><a href="#">Создание персональных смесей</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-info">
+            <h3 class="column-title">ИНФОРМАЦИЯ</h3>
+            <ul class="footer-list">
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+            </ul>
+        </div>
+        <div class="image-section"></div>
+    </div>
+</footer>
+
+  <script>
+    
+    (function() {
+      // Данные товаров в корзине (чай)
+      const products = [
+        { id: 1, name: 'Драконний жемчуг', price: 214, quantity: 1, image: 'images/Rectangle 49.png',
+    description: 'Нежный жасминовый чай со скруткой жемчужинами. Вес: 100 г.'
+  },
+        { id: 2, name: 'Лесное очарование', price: 310, quantity: 1, image: 'images/Rectangle 41.png',
+    description: 'Ягодный микс с малиной, черникой и гибискусом. Вес: 100 г.'
+  }
+      ];
+
+      const cartContainer = document.getElementById('cartContainer');
+      const totalQuantitySpan = document.getElementById('totalQuantity');
+      const totalPriceSpan = document.getElementById('totalPrice');
+
+      // Функция пересчета итогов
+      function updateTotals() {
+        let totalQty = 0;
+        let totalCost = 0;
+        const cards = document.querySelectorAll('.product-card');
+        cards.forEach(card => {
+          const qtyEl = card.querySelector('.quantity-value');
+          const price = parseInt(card.dataset.price);
+          const qty = parseInt(qtyEl.textContent);
+          totalQty += qty;
+          totalCost += price * qty;
+        });
+        totalQuantitySpan.textContent = totalQty;
+        totalPriceSpan.textContent = totalCost + ' ₽';
+      }
+
+      // Удаление товара
+      window.deleteProduct = function(cardElement) {
+        cardElement.remove();
+        updateTotals();
+        
+      };
+
+      // Изменение количества (стрелки)
+      window.changeQuantity = function(button, delta) {
+        const card = button.closest('.product-card');
+        const qtySpan = card.querySelector('.quantity-value');
+        let currentQty = parseInt(qtySpan.textContent);
+        currentQty = Math.max(1, currentQty + delta); // минимум 1
+        qtySpan.textContent = currentQty;
+        updateTotals();
+      };
+
+      // Рендер одной карточки
+     function renderProductCard(product) {
+  const cardDiv = document.createElement('div');
+  cardDiv.className = 'product-card';
+  cardDiv.dataset.price = product.price;
+  cardDiv.dataset.id = product.id;
+  
+  cardDiv.innerHTML = `
+    <!-- Картинка товара -->
+    <div class="product-image" style="background-image: url('${product.image}');"></div>
+    
+    <!-- Информация о товаре -->
+    <div class="product-info">
+      <div class="product-title">${product.name}</div>
+      
+      <!-- Описание чая (между названием и ценой) -->
+      <div class="product-description">${product.description}</div>
+      
+      <div class="product-desc">Цена: ${product.price} ₽</div>
+      <div class="product-controls">
+        <button class="quantity-btn" onclick="changeQuantity(this, -1)">−</button>
+        <span class="quantity-value">${product.quantity}</span>
+        <button class="quantity-btn" onclick="changeQuantity(this, 1)">+</button>
+        <button class="delete-btn" onclick="deleteProduct(this.closest('.product-card'))">Удалить</button>
+      </div>
+    </div>
+  `;
+  
+  cartContainer.appendChild(cardDiv);
+}
+
+      // Инициализация корзины
+      function initCart() {
+        cartContainer.innerHTML = '';
+        products.forEach(p => renderProductCard(p));
+        
+       
+        // убедимся, что кнопка не дублируется
+        const existingBtn = document.getElementById('addProductBtn');
+        if (existingBtn) existingBtn.remove();
+        addMoreBtn.id = 'addProductBtn';
+        document.getElementById('cartSection').appendChild(addMoreBtn);
+        updateTotals();
+      }
+
+      // Выбор способа оплаты (галочка в кружке)
+      window.selectPayment = function(circleElement) {
+        // снять выделение со всех кружков в блоке
+        const allCircles = document.querySelectorAll('#paymentOptions .radio-circle');
+        allCircles.forEach(c => c.classList.remove('checked'));
+        // добавить checked на выбранный
+        circleElement.classList.add('checked');
+      };
+
+      // Обработка placeholder'ов: при фокусе placeholder исчезает, текст вводится
+      // (уже реализовано через input placeholder, текст заменяется автоматически)
+
+      // Кнопка ОФОРМИТЬ (просто демонстрация)
+      document.getElementById('checkoutButton').addEventListener('click', function() {
+        const name = document.getElementById('nameInput').value || 'Не указано';
+        const phone = document.getElementById('phoneInput').value || 'Не указан';
+        const email = document.getElementById('emailInput').value || 'Не указан';
+        const address = document.getElementById('addressInput').value || 'Не указан';
+        const paymentSelected = document.querySelector('#paymentOptions .radio-circle.checked');
+        const paymentMethod = paymentSelected ? paymentSelected.closest('.payment-option').dataset.value : 'не выбран';
+        alert(`Заказ оформлен!\nИмя: ${name}\nТелефон: ${phone}\nEmail: ${email}\nАдрес: ${address}\nОплата: ${paymentMethod}\nСумма: ${totalPriceSpan.textContent}`);
+      });
+
+      // Старт
+      initCart();
+      // По умолчанию выберем первый способ оплаты
+      const firstCircle = document.querySelector('#paymentOptions .radio-circle');
+      if (firstCircle) firstCircle.classList.add('checked');
+    })();
+  </script>
+</body>
+</html>
