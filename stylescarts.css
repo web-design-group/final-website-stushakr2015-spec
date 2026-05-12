@@ -1,0 +1,591 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body - gradient background */
+body {
+    background: linear-gradient(90deg, 
+        #32462F 0%, 
+        #32462F 5%, 
+        #2D2D2D 20%, 
+        #2D2D2D 80%, 
+        #32462F 95%, 
+        #32462F 100%);
+    font-family: 'Bowler', cursive;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main container */
+.container {
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Bowler', cursive;
+    font-size: 14px;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========== HEADER ========== */
+.header {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px 0 40px;
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+/* Левая кнопка-иконка */
+.icon-img-btn img {  
+    display: block;
+    align-items: center;
+    height: 55px;
+    background: none;
+    cursor: pointer;
+    width: auto;
+    transition: opacity 0.2s;
+}
+
+.icon-img-btn img:hover {
+    opacity: 0.7;
+}
+
+.icon-img-btn img{
+    display: block;
+    height: 52px;
+    width: auto;
+}
+
+/* Навигация (5 текстовых кнопок) */
+.nav-links {
+    display: flex;
+    gap: 35px;
+    padding-left: 80px;
+    padding-right: 80px;
+    justify-self: center;
+    align-self: center;
+}
+
+.nav-link {
+    font-family: 'Bowlby One SC', 'BOWLER', cursive;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+    opacity: 0.6;
+}
+
+/* Правый блок */
+.right-group {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    justify-self: end;
+}
+
+.social-icons {
+    display: flex;
+    gap: 80px;
+}
+
+.social-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s;
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+}
+
+.social-icon img {
+    display: block;
+    height: 40px;
+    width: auto;
+}
+
+.special-icon-wrapper {
+    margin-right: 0;
+}
+
+.special-icon-btn {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s;
+}
+
+.special-icon-btn img {
+    display: block;
+    height: 52px;
+    width: auto;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.icon-btn img {
+    display: block;
+    transition: filter 0.2s ease;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-family: 'Bowler', cursive;
+    font-size: 18px;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+/* ========== MAIN CONTENT ========== */
+.main-page {
+    width: 100%;
+    padding: 140px 80px 0 80px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Product section using flex */
+.product-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.product-title {
+    font-family: 'Bowler', cursive;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: -520px 0 45px 450px;
+    max-width: 700px;
+}
+
+.product-content {
+    display: flex;
+    gap: 45px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.product-gallery {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-main-image {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-rating {
+    display: flex;
+    margin-left: 450px;
+    gap: 15px;
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+}
+
+.rating-star {
+    width: 55px;
+    height: 55px;
+}
+
+.product-description {
+    font-family: 'Bowler', cursive;
+    font-size: 35px;
+    margin-left: 450px;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 55px;
+}
+
+.product-icons {
+    display: flex;
+    margin-left: 525px;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+/* ========== RIGHT SIDEBAR ========== */
+.right-sidebar {
+    position: absolute;
+    right: 60px;
+    top: 250px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.effects-rectangle {
+    width: 285px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.effects-text {
+    font-family: 'Bowler', cursive;
+    font-size: 35px;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.effects-rectangle:hover .effects-text {
+    color: #2ecc71;
+}
+
+.tea-info {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.tea-name,
+.tea-flavor,
+.tea-warming {
+    font-family: 'Bowler', cursive;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.tea-name {
+    margin-bottom: 15px;
+}
+
+.tea-flavor {
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 60px 164px 80px 164px;
+    margin-top: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Brand section */
+.footer-brand {
+    flex: 0;
+    min-width: 400px;
+}
+
+.brand-title {
+    font-family: 'Fet', 'Fjalla One', cursive;
+    font-size: 40px;
+    color: #000000;
+    margin: 10px 0;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+/* Links columns */
+.footer-links {
+    display: flex;
+    gap: 80px;
+    flex: 2;
+}
+
+.footer-column {
+    min-width: 150px;
+}
+
+.column-title {
+    font-family: 'BOWLER', 'Kalam', cursive;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 12px;
+}
+
+.footer-list a {
+    font-family: 'Figma Hand', 'Kalam', cursive;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-list a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Info section */
+.footer-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1200px) {
+    .main-page {
+        padding: 100px 40px 0 40px;
+    }
+    
+    .product-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .product-title {
+        font-size: 48px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .product-description {
+        font-size: 28px;
+        margin-left: 0;
+    }
+    
+    .product-rating {
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+    
+    .product-icons {
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+    
+    .right-sidebar {
+        position: static;
+        margin-top: 40px;
+        align-items: flex-start;
+    }
+    
+    .footer {
+        padding: 40px 40px 60px 40px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-links {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    
+    .footer-brand {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footer-column {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-list {
+        align-items: center;
+    }
+    
+    .footer-info {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-page {
+        padding: 80px 20px 0 20px;
+    }
+    
+    .product-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .rating-star {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .product-rating {
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .product-description {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+    
+    .product-icons {
+        gap: 30px;
+    }
+    
+    .header {
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+    
+    .header-left {
+        margin-right: 0;
+        gap: 20px;
+    }
+    
+    .header-right {
+        padding-right: 0;
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+    }
+    
+    .footer {
+        padding: 30px 20px 40px 20px;
+    }
+    
+    .brand-title {
+        font-size: 24px;
+    }
+    
+    .column-title {
+        font-size: 18px;
+    }
+    
+    .footer-list a {
+        font-size: 14px;
+    }
+    
+    .effects-rectangle {
+        width: 200px;
+        height: 60px;
+    }
+    
+    .effects-text {
+        font-size: 24px;
+    }
+    
+    .tea-name,
+    .tea-flavor,
+    .tea-warming {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-title {
+        font-size: 24px;
+    }
+    
+    .product-description {
+        font-size: 16px;
+    }
+    
+    .rating-star {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .product-icons {
+        gap: 20px;
+    }
+    
+    .header-left {
+        gap: 10px;
+    }
+    
+    .header-right {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
