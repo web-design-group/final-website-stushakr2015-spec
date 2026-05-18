@@ -1,16 +1,18 @@
 @font-face {
-      font-family: 'BOWLER';
-      src: url('images/Bowler.ttf'), format('ttf');
+    font-family: 'BOWLER';
+    src: url('images/Bowler.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Fet';
     src: url('images/Fet Regular.ttf') format('truetype');
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Убираем подчеркивание у всех ссылок */
 a {
     text-decoration: none;
@@ -19,7 +21,7 @@ a {
 /* Или только для навигационных ссылок */
 .nav-link {
     text-decoration: none;
-    color: inherit; /* Сохраняет текущий цвет текста */
+    color: inherit;
 }
 
 /* Для ссылок в футере */
@@ -28,11 +30,12 @@ a {
     color: #333;
 }
 
-/* При наведении тоже без подчеркивания (или можно добавить другой эффект) */
+/* При наведении тоже без подчеркивания */
 .nav-link:hover {
     text-decoration: none;
-    opacity: 0.7; /* Эффект при наведении */
+    opacity: 0.7;
 }
+
 /* Основной фон body — градиент */
 body {
     font-family: 'Bowlby One SC', 'BOWLER', cursive;
@@ -49,7 +52,7 @@ body {
     width: 100%;
 }
 
-/* Главный контейнер — только центрирование, без лишних фонов */
+/* Главный контейнер */
 .container {
     width: 100%;
     max-width: 100%;
@@ -62,7 +65,7 @@ body {
     flex-direction: column;
 }
 
-/* Белый фон для верхней части — на всю ширину экрана */
+/* Белый фон для верхней части */
 .white-bg-section {
     background-color: white;
     width: 100%;
@@ -80,7 +83,7 @@ body {
     position: relative;
 }
 
-/* Контент внутри — центрируется с ограничением по ширине */
+/* Контент внутри */
 .content-wrapper {
     max-width: 1440px;
     margin: 0 auto;
@@ -95,7 +98,6 @@ body {
     align-items: center;
     padding-top: 40px;
     padding-left: 60px;
-    border: none;
     padding-right: 80px;
     width: 100%;
     position: relative;
@@ -104,7 +106,7 @@ body {
 }
 
 /* Левая кнопка-иконка */
-.icon-img-btn img {  
+.icon-img-btn img {
     display: block;
     align-items: center;
     height: 55px;
@@ -118,13 +120,7 @@ body {
     opacity: 0.7;
 }
 
-.icon-img-btn img{
-    display: block;
-    height: 52px;
-    width: auto;
-}
-
-/* Навигация (5 текстовых кнопок) */
+/* Навигация */
 .nav-links {
     display: flex;
     gap: 35px;
@@ -207,7 +203,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    margin: 0 auto; /* Центрируем */
+    margin: 0 auto;
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 100px;
@@ -305,10 +301,11 @@ body {
     max-width: 800px;
     margin: 0 auto;
 }
+
 /* ===== СЕКЦИЯ НОВАЯ КОЛЛЕКЦИЯ ===== */
 .new-collection-section {
     width: 100%;
-    padding-top: 130px;  /* Отступ от предыдущего контента */
+    padding-top: 130px;
     padding-bottom: 0;
 }
 
@@ -321,6 +318,7 @@ body {
     font-weight: normal;
     letter-spacing: 2px;
 }
+
 /* ===== КЛИКАБЕЛЬНЫЕ КАРТИНКИ КОЛЛЕКЦИИ ===== */
 .collection-item {
     flex-shrink: 0;
@@ -331,21 +329,18 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Зеленый цвет по краям при наведении */
 .collection-item:hover {
     box-shadow: 0 0 0 6px #32462F, 0 0 0 12px #4a6b44;
     border-radius: 20px;
     transition: all 0.25s ease;
 }
 
-/* Черный цвет по краям при клике + эффект рассеивания */
 .collection-item:active {
     box-shadow: 0 0 0 6px #000000, 0 0 0 12px #1a1a1a, 0 0 20px 15px rgba(0, 0, 0, 0.5);
     transform: scale(0.98);
     transition: all 0.1s ease;
 }
 
-/* Дополнительный эффект рассеивания при клике */
 .collection-item:active::before {
     content: '';
     position: absolute;
@@ -360,7 +355,6 @@ body {
     animation: ripple 0.3s ease-out;
 }
 
-/* Анимация рассеивания */
 @keyframes ripple {
     0% {
         transform: translate(-50%, -50%) scale(0.5);
@@ -372,7 +366,6 @@ body {
     }
 }
 
-/* Чтобы ссылка занимала весь блок */
 .collection-link {
     display: block;
     text-decoration: none;
@@ -384,8 +377,9 @@ body {
     max-width: 100%;
     display: block;
     border-radius: 20px;
-    pointer-events: none; /* Чтобы клик проходил на родителя */
+    pointer-events: none;
 }
+
 .collection-items {
     display: flex;
     justify-content: flex-start;
@@ -394,17 +388,6 @@ body {
     padding-left: 115px;
     padding-right: 115px;
     flex-wrap: wrap;
-}
-
-.collection-item {
-    flex-shrink: 0;
-}
-
-.collection-item img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    display: block;
 }
 
 /* ===== СЕКЦИЯ С УСЛУГОЙ ===== */
@@ -483,6 +466,7 @@ body {
     background-color: #1a1a1a;
     transform: scale(0.98);
 }
+
 /* ===== СЕКЦИЯ С МАСТЕР-КЛАССАМИ ===== */
 .masterclass-section {
     background: linear-gradient(90deg, 
@@ -566,90 +550,7 @@ body {
     display: block;
 }
 
-/* ===== АДАПТИВНОСТЬ ===== */
-@media (max-width: 1200px) {
-    .masterclass-content {
-        padding-left: 80px;
-        padding-right: 80px;
-        gap: 50px;
-    }
-    
-    .masterclass-title {
-        font-size: 32px;
-    }
-    
-    .masterclass-description {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 900px) {
-    .masterclass-content {
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    
-    .masterclass-text-block {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 100%;
-    }
-    
-    .masterclass-title {
-        font-size: 28px;
-        margin-bottom: 30px;
-    }
-    
-    .masterclass-description {
-        margin-bottom: 50px;
-    }
-    
-    .masterclass-section {
-        padding-top: 50px;
-    }
-}
-
-@media (max-width: 768px) {
-    .masterclass-content {
-        padding-left: 20px;
-        padding-right: 20px;
-        gap: 40px;
-    }
-    
-    .masterclass-title {
-        font-size: 24px;
-    }
-    
-    .masterclass-description {
-        font-size: 16px;
-        margin-bottom: 40px;
-    }
-    
-    .masterclass-btn {
-        width: 180px;
-        height: 38px;
-        font-size: 18px;
-    }
-}
-.services-section {
-    width: 100%;
-    padding-top: 160px;
-    padding-bottom: 160px;
-}
-
-.services-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
-    font-size: 64px;
-    color: white;
-    text-align: center;
-    padding-top: 160px;
-    margin: 0;
-}
+/* ===== СЕКЦИЯ О НАС ===== */
 .about-section {
     background: linear-gradient(90deg, 
         #32462F 0%, 
@@ -689,7 +590,7 @@ body {
     font-family: 'BOWLER', 'Bowlby One SC', cursive;
     font-size: 64px;
     color: white;
-    margin: 10 0 0px 0;
+    margin: 10px 0 0 0;
     font-weight: normal;
 }
 
@@ -700,274 +601,22 @@ body {
     margin: 0;
     line-height: 1.5;
 }
-.reviews-title {
+
+/* ===== СЕКЦИЯ КАТАЛОГА ТОВАРОВ ===== */
+.services-section {
+    width: 100%;
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+.services-title {
     font-family: 'BOWLER', 'Bowlby One SC', cursive;
     font-size: 64px;
     color: white;
     text-align: center;
-    margin: 0 0 70px 0;
-    margin-bottom: 20px;
-    font-weight: normal;
-    position: relative;
-    z-index: 1;
+    padding-top: 160px;
+    margin: 0;
 }
-/* ===== СЕКЦИЯ С ОТЗЫВАМИ ===== */
-.reviews-section {
-    width: 100%;
-    padding-top: 0px;
-    padding-bottom: 100px;
-    position: relative;
-}
-
-/* Фоновый прямоугольник */
-.reviews-section::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 740px;
-    background: #334F2F;
-    z-index: 0;
-}
-
-/* Карусель */
-.carousel-container {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 20px 0;
-    z-index: 1;
-}
-
-.carousel-track {
-    display: flex;
-    gap: 30px;
-    transition: transform 0.5s ease;
-    will-change: transform;
-}
-
-/* Карточка отзыва */
-.review-card {
-    flex: 0 0 330px;
-    height: 487px;
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.review-green-part {
-    height: 367px;
-    background: #55a53a;
-    padding: 50px 30px 0 30px;
-    position: relative;
-}
-
-.stars {
-    color: #ffffff;
-    font-size: 40px;
-    letter-spacing: 5px;
-    margin-bottom: 30px;
-}
-
-.review-text {
-    color: white;
-    font-family: 'Figma Hand', 'Kalam', cursive;
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.review-white-part {
-    height: 120px;
-    background: white;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-}
-
-.avatar {
-    width: 82px;
-    height: 82px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-top: -60px;
-    margin-bottom: 20px;
-    border: 3px solid #55a53a;
-    background: white;
-}
-
-.avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.username {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
-    font-size: 20px;
-    color: black;
-    text-align: center;
-}
-
-/* Кнопки карусели */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: rgb(32, 67, 31);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 2;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-btn:hover {
-    background: rgb(34, 80, 24);
-}
-
-.prev-btn {
-    left: 20px;
-}
-
-.next-btn {
-    right: 20px;
-}
-/* ===== АДАПТИВНОСТЬ ===== */
-@media (max-width: 1200px) {
-    .carousel-container {
-        max-width: 900px;
-    }
-}
-
-@media (max-width: 900px) {
-    .carousel-container {
-        max-width: 690px;
-    }
-    
-    .reviews-title {
-        font-size: 48px;
-    }
-}
-
-@media (max-width: 768px) {
-    .reviews-section {
-        padding-top: 200px;
-    }
-    
-    .reviews-title {
-        font-size: 36px;
-        margin-bottom: 50px;
-    }
-    
-    .carousel-container {
-        max-width: 330px;
-    }
-    
-    .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 24px;
-    }
-}
-@media (max-width: 1000px) {
-    .about-content {
-        display: flex;
-        flex-direction: column;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    
-    .about-text-block {
-        width: 100%;
-        margin-top: 40px;
-    }
-}
-
-/* ===== АДАПТИВНОСТЬ ===== */
-@media (max-width: 1200px) {
-    .about-content {
-        padding-left: 80px;
-        gap: 30px;
-    }
-    
-    .about-title {
-        font-size: 48px;
-        margin-bottom: 50px;
-    }
-    
-    .about-description {
-        font-size: 18px;
-    }
-    
-    .about-text-block {
-        width: 350px;
-        max-width: 350px;
-    }
-}
-
-@media (max-width: 900px) {
-    .about-content {
-        flex-wrap: wrap;  /* На мобильных разрешаем перенос */
-        justify-content: center;
-        padding-left: 40px;
-        padding-right: 40px;
-        gap: 40px;
-    }
-    
-    .about-text-block {
-        width: 100%;
-        max-width: 500px;
-        text-align: center;
-    }
-    
-    .about-title {
-        font-size: 40px;
-        margin-bottom: 40px;
-    }
-    
-    .about-description {
-        font-size: 18px;
-        max-width: 100%;
-    }
-    
-    .about-section {
-        padding-top: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-content {
-        padding-left: 20px;
-        padding-right: 20px;
-        gap: 30px;
-    }
-    
-    .about-title {
-        font-size: 32px;
-        margin-bottom: 30px;
-    }
-    
-    .about-description {
-        font-size: 16px;
-    }
-    
-    .about-section {
-        padding-top: 80px;
-    }
-}
-
-/* ===== СЕКЦИЯ КАТАЛОГА ТОВАРОВ ===== */
 
 .catalog-title {
     font-family: 'BOWLER', 'Bowlby One SC', cursive;
@@ -978,7 +627,6 @@ body {
     font-weight: normal;
 }
 
-/* Кнопка-картинка над товарами */
 .catalog-top-btn {
     padding-left: 75px;
     margin-bottom: 65px;
@@ -993,7 +641,6 @@ body {
     opacity: 0.7;
 }
 
-/* Сетка товаров */
 .products-grid {
     display: flex;
     justify-content: flex-start;
@@ -1003,14 +650,12 @@ body {
     flex-wrap: wrap;
 }
 
-/* Карточка товара */
 .product-card {
     flex: 0 0 auto;
     width: calc(25% - 33px);
     min-width: 230px;
 }
 
-/* Блок с изображением товара */
 .product-image {
     position: relative;
     display: inline-block;
@@ -1023,7 +668,6 @@ body {
     display: block;
 }
 
-/* Кнопка на картинке товара (от нижнего и правого края по 70px) */
 .product-btn {
     position: absolute;
     bottom: 100px;
@@ -1040,28 +684,23 @@ body {
     height: auto;
 }
 
-/* Состояние по умолчанию (исходное изображение) */
 .catalog-section .product-btn img {
     display: block;
     transition: filter 0.3s ease;
 }
 
-/* При наведении — зелёная */
 .catalog-section .product-btn:hover img {
     filter: brightness(0) saturate(100%) invert(58%) sepia(74%) saturate(455%) hue-rotate(81deg) brightness(96%) contrast(91%);
 }
 
-/* Активное состояние (после клика) — чёрная, остаётся до следующего клика */
 .catalog-section .product-btn.active img {
     filter: brightness(0) saturate(100%) invert(58%) sepia(74%) saturate(455%) hue-rotate(81deg) brightness(96%) contrast(91%);
 }
 
-/* При клике (в момент нажатия) — временный эффект */
 .catalog-section .product-btn:active img {
     filter: brightness(0);
 }
 
-/* Название товара */
 .product-title {
     font-family: 'BOWLER', 'Bowlby One SC', cursive;
     font-size: 32px;
@@ -1071,7 +710,6 @@ body {
     line-height: 1.2;
 }
 
-/* Звёзды */
 .product-stars {
     color: #ffffff;
     font-size: 40px;
@@ -1079,7 +717,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Блок с ценой и кнопкой */
 .product-price {
     display: flex;
     justify-content: space-between;
@@ -1159,9 +796,9 @@ body {
     margin: 0;
     font-weight: normal;
 }
+
 /* ===== СЕКЦИЯ С ИЗОБРАЖЕНИЯМИ И ТЕКСТОМ ===== */
 .media-section {
-
     width: 100%;
     padding-top: 70px;
     padding-bottom: 100px;
@@ -1173,7 +810,6 @@ body {
     min-height: 600px;
 }
 
-/* Основное изображение (от правого края 195px) */
 .media-main-image {
     position: absolute;
     right: 195px;
@@ -1187,11 +823,11 @@ body {
     height: auto;
     max-width: 100%;
 }
-/* Наложенное изображение (в нижнем левом углу основного) */
+
 .media-overlay-image {
     position: absolute;
-    bottom: -100px;   /* Опускаем на 10px ниже края основного изображения */
-    left: -100px;     /* Сдвигаем влево на 10px */
+    bottom: -100px;
+    left: -100px;
     z-index: 2;
 }
 
@@ -1199,9 +835,9 @@ body {
     display: block;
     width: auto;
     height: auto;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2)); /* Опционально: тень для наложения */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
 }
-/* Квадрат с текстом (от левого края 180px, от надписи СОЦСЕТИ 195px) */
+
 .media-text-block {
     position: absolute;
     left: 180px;
@@ -1225,11 +861,10 @@ body {
     flex: 1;
 }
 
-/* Кнопка под квадратом (на 77px ниже) */
 .media-btn {
     position: absolute;
-    left: 0px;
-    top: 300px; 
+    left: 180px;
+    top: 523px; /* 195px + 251px + 77px */
     width: 290px;
     height: 81px;
     background-color: black;
@@ -1239,14 +874,12 @@ body {
     font-family: 'Bowler', cursive;
     font-size: 40px;
     color: #ffffff;
-    padding: 25px 40px;
-    margin-top: 50px;
     text-align: center;
-    cursor: pointer;
     transition: all 0.3s ease;
-    text-align: center; /* Выравнивание текста по центру */
-    display: inline-block; /* Чтобы кнопка была блочно-строчной */
-    text-decoration: none; /* Убираем подчеркивание если это ссылка */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
 }
 
 .media-btn:hover {
@@ -1258,6 +891,147 @@ body {
     background-color: #1a1a1a;
     transform: scale(0.98);
 }
+
+/* ===== СЕКЦИЯ С ОТЗЫВАМИ ===== */
+.reviews-title {
+    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-size: 64px;
+    color: white;
+    text-align: center;
+    margin: 0 0 70px 0;
+    font-weight: normal;
+    position: relative;
+    z-index: 1;
+}
+
+.reviews-section {
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.reviews-section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 740px;
+    background: #334F2F;
+    z-index: 0;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.review-card {
+    flex: 0 0 330px;
+    height: 487px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.review-green-part {
+    height: 367px;
+    background: #55a53a;
+    padding: 50px 30px 0 30px;
+    position: relative;
+}
+
+.stars {
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.review-text {
+    color: white;
+    font-family: 'Figma Hand', 'Kalam', cursive;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.review-white-part {
+    height: 120px;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.avatar {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -60px;
+    margin-bottom: 20px;
+    border: 3px solid #55a53a;
+    background: white;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.username {
+    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgb(32, 67, 31);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: rgb(34, 80, 24);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
 /* ===== СЕКЦИЯ С КОНТАКТАМИ ===== */
 .contacts-section {
     width: 100%;
@@ -1267,7 +1041,6 @@ body {
     min-height: 500px;
 }
 
-/* Текстовый блок слева */
 .contacts-text-block {
     position: absolute;
     left: 190px;
@@ -1275,18 +1048,17 @@ body {
     max-width: 500px;
 }
 
-/* Картинка справа - на том же уровне что и заголовок */
 .contacts-image {
     position: absolute;
     right: 40px;
-    top: 290px;  /* Тот же отступ сверху, что и у текстового блока */
+    top: 290px;
 }
 
 .contacts-title {
     font-family: 'BOWLER', 'Bowlby One SC', cursive;
     font-size: 45px;
     color: white;
-    margin: 0px 0px 34px 0px;
+    margin: 0 0 34px 0;
     font-weight: normal;
     line-height: 1.2;
 }
@@ -1318,6 +1090,7 @@ body {
     width: auto;
     height: auto;
 }
+
 /* ===== FOOTER ===== */
 .footer {
     width: 100%;
@@ -1335,7 +1108,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* Brand section */
 .footer-brand {
     flex: 0;
     min-width: 400px;
@@ -1350,7 +1122,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* Links columns */
 .footer-links {
     display: flex;
     gap: 80px;
@@ -1393,111 +1164,11 @@ body {
     text-decoration: underline;
 }
 
-/* Info section */
 .footer-info {
     flex: 1;
     min-width: 200px;
 }
 
-@media (max-width: 1100px) {
-    .contacts-text-block {
-        position: relative;
-        left: auto;
-        top: auto;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    .contacts-image {
-        position: relative;
-        right: auto;
-        top: auto;
-        margin: 40px auto 0;
-        text-align: center;
-    }
-}
-
-/* ===== АДАПТИВНОСТЬ ===== */
-@media (max-width: 1200px) {
-    .contacts-content {
-        padding-left: 40px;
-        padding-right: 40px;
-        gap: 40px;
-    }
-    
-    .contacts-title {
-        font-size: 32px;
-    }
-    
-    .contacts-address,
-    .contacts-phone,
-    .contacts-email {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 900px) {
-    .contacts-section {
-        padding-top: 100px;
-    }
-    
-    .contacts-content {
-        flex-direction: column;  /* На планшетах текст сверху, картинка снизу */
-        align-items: center;
-        text-align: center;
-    }
-    
-    .contacts-text-block {
-        text-align: center;
-        max-width: 100%;
-    }
-    
-    .contacts-title {
-        font-size: 28px;
-    }
-    
-    .contacts-address,
-    .contacts-phone,
-    .contacts-email {
-        font-size: 18px;
-        text-align: center;
-    }
-    
-    .contacts-image {
-        margin-top: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .contacts-section {
-        padding-top: 80px;
-        padding-bottom: 60px;
-    }
-    
-    .contacts-content {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    
-    .contacts-title {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-    
-    .contacts-address {
-        margin-bottom: 25px;
-    }
-    
-    .contacts-phone {
-        margin-bottom: 20px;
-    }
-    
-    .contacts-address,
-    .contacts-phone,
-    .contacts-email {
-        font-size: 16px;
-    }
-}
 /* ===== АДАПТИВНОСТЬ ===== */
 @media (max-width: 1400px) {
     .media-main-image {
@@ -1524,133 +1195,28 @@ body {
     }
 }
 
-@media (max-width: 1100px) {
-    .media-section .content-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 20px;
+@media (max-width: 1200px) {
+    .masterclass-content {
+        padding-left: 80px;
+        padding-right: 80px;
+        gap: 50px;
     }
     
-    .media-main-image {
-        position: relative;
-        right: auto;
-        top: auto;
-        margin-bottom: 40px;
-        text-align: center;
+    .masterclass-title {
+        font-size: 32px;
     }
     
-    .media-text-block {
-        position: relative;
-        left: auto;
-        top: auto;
-        width: 100%;
-        max-width: 440px;
-        margin-bottom: 30px;
-    }
-    
-    .media-btn {
-        position: relative;
-        left: auto;
-        top: auto;
-        margin: 0 auto;
-        display: block;
-    }
-}
-
-@media (max-width: 768px) {
-    .media-section {
-        padding-top: 50px;
-    }
-    
-    .media-text-block {
-        width: 100%;
-        max-width: 100%;
-        padding: 15px;
-    }
-    
-    .media-description {
+    .masterclass-description {
         font-size: 18px;
     }
     
-    .media-btn {
-        width: 220px;
-        height: 60px;
-        font-size: 28px;
+    .carousel-container {
+        max-width: 900px;
     }
     
-    .media-main-image {
-        right: auto;
-        left: 0;
-        width: 100%;
-    }
-    
-    .media-main-image > img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .media-overlay-image {
-        bottom: -20px;
-        left: -20px;
-    }
-    
-    .media-overlay-image img {
-        width: 80px;
-        height: auto;
-    }
-}
-/* ===== АДАПТИВНОСТЬ ===== */
-@media (max-width: 768px) {
-    .show-more-btn {
-        width: 280px;
-        height: 70px;
-        font-size: 24px;
-    }
-    
-    .show-more-section {
-        padding-top: 80px;
-    }
-    
-    .social-section {
-        padding-top: 120px;
-        padding-bottom: 60px;
-    }
-    
-    .social-title {
-        font-size: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .show-more-btn {
-        width: 240px;
-        height: 60px;
-        font-size: 20px;
-    }
-    
-    .show-more-section {
-        padding-top: 60px;
-    }
-    
-    .social-section {
-        padding-top: 80px;
-        padding-bottom: 40px;
-    }
-    
-    .social-title {
-        font-size: 32px;
-    }
-}
-/* ===== АДАПТИВНОСТЬ ===== */
-@media (max-width: 1200px) {
     .about-content {
         padding-left: 80px;
-    }
-    
-    .about-text-block {
-        right: 80px;
-        width: 350px;
+        gap: 30px;
     }
     
     .about-title {
@@ -1661,113 +1227,28 @@ body {
     .about-description {
         font-size: 18px;
     }
-}
-
-@media (max-width: 900px) {
-    .about-content {
-        padding-left: 40px;
-        flex-direction: column;
-        align-items: center;
-    }
     
     .about-text-block {
-        position: static;
-        width: 100%;
-        max-width: 500px;
-        margin-top: 40px;
-        text-align: center;
+        width: 350px;
+        max-width: 350px;
     }
     
-    .about-description {
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+    .contacts-content {
+        padding-left: 40px;
+        padding-right: 40px;
+        gap: 40px;
     }
     
-    .about-title {
-        font-size: 40px;
-    }
-    
-    .about-section {
-        padding-top: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-content {
-        padding-left: 20px;
-    }
-    
-    .about-title {
+    .contacts-title {
         font-size: 32px;
-        margin-bottom: 30px;
     }
     
-    .about-description {
-        font-size: 16px;
+    .contacts-address,
+    .contacts-phone,
+    .contacts-email {
+        font-size: 20px;
     }
     
-    .about-section {
-        padding-top: 80px;
-    }
-
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .footer {
-        padding: 40px 20px 60px 20px;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .footer-brand {
-        min-width: auto;
-    }
-    
-    .brand-title {
-        font-size: 30px;
-    }
-    
-    .footer-links {
-        flex-direction: column;
-        gap: 30px;
-    }
-}
-
-/* Адаптивность для мобильных */
-@media (max-width: 768px) {
-    .footer {
-        padding: 40px 20px 0 20px;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .footer-brand {
-        min-width: auto;
-    }
-    
-    .brand-title {
-        font-size: 30px;
-    }
-    
-    .footer-links {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .footer-image {
-        height: 250px;
-    }
-}
-/* ===== АДАПТИВНОСТЬ ===== */
-@media (max-width: 1100px) {
     .header {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1826,7 +1307,338 @@ body {
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1100px) {
+    .contacts-text-block {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .contacts-image {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 40px auto 0;
+        text-align: center;
+    }
+    
+    .media-section .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    .media-main-image {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .media-text-block {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        max-width: 440px;
+        margin-bottom: 30px;
+    }
+    
+    .media-btn {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .about-text-block {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .masterclass-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .masterclass-text-block {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+    
+    .masterclass-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .masterclass-description {
+        margin-bottom: 50px;
+    }
+    
+    .masterclass-section {
+        padding-top: 50px;
+    }
+    
+    .carousel-container {
+        max-width: 690px;
+    }
+    
+    .reviews-title {
+        font-size: 48px;
+    }
+    
+    .about-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        gap: 40px;
+    }
+    
+    .about-text-block {
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+    }
+    
+    .about-title {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .about-description {
+        font-size: 18px;
+        max-width: 100%;
+    }
+    
+    .about-section {
+        padding-top: 100px;
+    }
+    
+    .contacts-section {
+        padding-top: 100px;
+    }
+    
+    .contacts-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contacts-text-block {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .contacts-title {
+        font-size: 28px;
+    }
+    
+    .contacts-address,
+    .contacts-phone,
+    .contacts-email {
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .contacts-image {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .masterclass-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 40px;
+    }
+    
+    .masterclass-title {
+        font-size: 24px;
+    }
+    
+    .masterclass-description {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+    
+    .masterclass-btn {
+        width: 180px;
+        height: 38px;
+        font-size: 18px;
+    }
+    
+    .reviews-section {
+        padding-top: 200px;
+    }
+    
+    .reviews-title {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+    
+    .carousel-container {
+        max-width: 330px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+    
+    .about-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 30px;
+    }
+    
+    .about-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .about-description {
+        font-size: 16px;
+    }
+    
+    .about-section {
+        padding-top: 80px;
+    }
+    
+    .show-more-btn {
+        width: 280px;
+        height: 70px;
+        font-size: 24px;
+    }
+    
+    .show-more-section {
+        padding-top: 80px;
+    }
+    
+    .social-section {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+    
+    .social-title {
+        font-size: 40px;
+    }
+    
+    .media-section {
+        padding-top: 50px;
+    }
+    
+    .media-text-block {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .media-description {
+        font-size: 18px;
+    }
+    
+    .media-btn {
+        width: 220px;
+        height: 60px;
+        font-size: 28px;
+    }
+    
+    .media-main-image {
+        right: auto;
+        left: 0;
+        width: 100%;
+    }
+    
+    .media-main-image > img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .media-overlay-image {
+        bottom: -20px;
+        left: -20px;
+    }
+    
+    .media-overlay-image img {
+        width: 80px;
+        height: auto;
+    }
+    
+    .contacts-section {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    
+    .contacts-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .contacts-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .contacts-address {
+        margin-bottom: 25px;
+    }
+    
+    .contacts-phone {
+        margin-bottom: 20px;
+    }
+    
+    .contacts-address,
+    .contacts-phone,
+    .contacts-email {
+        font-size: 16px;
+    }
+    
+    .footer {
+        padding: 40px 20px 60px 20px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-brand {
+        min-width: auto;
+    }
+    
+    .brand-title {
+        font-size: 30px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
     .main-title {
         font-size: 48px;
     }
@@ -1859,17 +1671,25 @@ body {
     .gradient-content p {
         font-size: 14px;
     }
-    
-    .footer {
-        padding: 30px 20px;
+}
+
+@media (max-width: 480px) {
+    .show-more-btn {
+        width: 240px;
+        height: 60px;
+        font-size: 20px;
     }
     
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
+    .show-more-section {
+        padding-top: 60px;
     }
     
-    .footer-links {
-        gap: 30px;
+    .social-section {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    
+    .social-title {
+        font-size: 32px;
     }
 }
