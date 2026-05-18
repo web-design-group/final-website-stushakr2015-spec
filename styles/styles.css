@@ -5,6 +5,15 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Fet';
+    src: url('fonts/Fet Regular.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    }
+
 {
     margin: 0;
     padding: 0;
