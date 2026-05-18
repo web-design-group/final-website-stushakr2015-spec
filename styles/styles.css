@@ -602,6 +602,147 @@ body {
     line-height: 1.5;
 }
 
+/* ===== СЕКЦИЯ С ОТЗЫВАМИ ===== */
+.reviews-title {
+    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-size: 64px;
+    color: white;
+    text-align: center;
+    margin: 0 0 70px 0;
+    font-weight: normal;
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+}
+
+.reviews-section {
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.reviews-section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 740px;
+    background: #334F2F;
+    z-index: 0;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.review-card {
+    flex: 0 0 330px;
+    height: 487px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.review-green-part {
+    height: 367px;
+    background: #55a53a;
+    padding: 50px 30px 0 30px;
+    position: relative;
+}
+
+.stars {
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.review-text {
+    color: white;
+    font-family: 'Figma Hand', 'Kalam', cursive;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.review-white-part {
+    height: 120px;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.avatar {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -60px;
+    margin-bottom: 20px;
+    border: 3px solid #55a53a;
+    background: white;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.username {
+    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgb(32, 67, 31);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover {
+    background: rgb(34, 80, 24);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
 /* ===== СЕКЦИЯ КАТАЛОГА ТОВАРОВ ===== */
 .services-section {
     width: 100%;
@@ -890,147 +1031,6 @@ body {
 .media-btn:active {
     background-color: #1a1a1a;
     transform: scale(0.98);
-}
-
-/* ===== СЕКЦИЯ С ОТЗЫВАМИ ===== */
-.reviews-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
-    font-size: 64px;
-    color: white;
-    text-align: center;
-    margin: 0 0 70px 0;
-    font-weight: normal;
-    position: relative;
-    z-index: 1;
-    padding-top: 30px;
-}
-
-.reviews-section {
-    width: 100%;
-    padding-top: 0px;
-    padding-bottom: 100px;
-    position: relative;
-}
-
-.reviews-section::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 740px;
-    background: #334F2F;
-    z-index: 0;
-}
-
-.carousel-container {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 20px 0;
-    z-index: 1;
-}
-
-.carousel-track {
-    display: flex;
-    gap: 30px;
-    transition: transform 0.5s ease;
-    will-change: transform;
-}
-
-.review-card {
-    flex: 0 0 330px;
-    height: 487px;
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.review-green-part {
-    height: 367px;
-    background: #55a53a;
-    padding: 50px 30px 0 30px;
-    position: relative;
-}
-
-.stars {
-    color: #ffffff;
-    font-size: 40px;
-    letter-spacing: 5px;
-    margin-bottom: 30px;
-}
-
-.review-text {
-    color: white;
-    font-family: 'Figma Hand', 'Kalam', cursive;
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.review-white-part {
-    height: 120px;
-    background: white;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-}
-
-.avatar {
-    width: 82px;
-    height: 82px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-top: -60px;
-    margin-bottom: 20px;
-    border: 3px solid #55a53a;
-    background: white;
-}
-
-.avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.username {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
-    font-size: 20px;
-    color: black;
-    text-align: center;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: rgb(32, 67, 31);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 2;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-btn:hover {
-    background: rgb(34, 80, 24);
-}
-
-.prev-btn {
-    left: 20px;
-}
-
-.next-btn {
-    right: 20px;
 }
 
 /* ===== СЕКЦИЯ С КОНТАКТАМИ ===== */
