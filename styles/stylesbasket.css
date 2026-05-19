@@ -6,14 +6,15 @@
     font-family: 'Fet';
     src: url('images/Fet Regular.ttf') format('truetype');
 }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-    font-family: 'Bowlby One SC', 'BOWLER', cursive;
-    min-height: 100vh;
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'BOWLER', 'Arial Black', sans-serif;
     display: flex;
     flex-direction: column;
     background: linear-gradient(90deg, 
@@ -24,68 +25,39 @@
         #32462F 95%, 
         #32462F 100%);
     width: 100%;
+     overflow-x: hidden; 
 }
-    
-    .page {
-      width: 100%;
-      height: 2869px;
-      position: relative;
-      overflow-y: auto; 
-      overflow-x: hidden;
-      color: white;
-      margin: 0 auto;
-    }
 
-    /* ----- ШАПКА ----- */
-   .header {
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0px 60px 0px;
+    position: relative;
+    min-height: auto;
+    height: auto;
+    gap: 0;
+}
+
+/* ===== ШАПКА ===== */
+.header {
     display: grid;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #FFFFFF;  
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding-top: 40px;
-    padding-left: 40px;
-    border: none;
-    padding-right: 40px;
-    padding-bottom: 40px;
+    padding: 40px;
     width: 100%;
+    max-width: 100%; 
     position: relative;
-    z-index: 0;
+    z-index: 10; 
     flex-shrink: 0;
+    order: 1;  
 }
 
-/* Левая кнопка-иконка */
-.icon-img-btn img {  
-    display: block;
-    align-items: center;
-    height: 55px;
-    background: none;
-    cursor: pointer;
-    width: auto;
-    transition: opacity 0.2s;
-}
-/* Навигация (5 текстовых кнопок) */
-.nav-links {
-    display: flex;
-    gap: 35px;
-    padding-right: 80px;
-    padding-left: 80px;
-    justify-self: center;
-    align-self: center;
-}
-.icon-img-btn img:hover {
-    opacity: 0.7;
-}
-
-.icon-img-btn img{
-    display: block;
-    height: 52px;
-    width: auto;
-}
-
-.nav-link {
-    font-family: BOWLER;
-    font-size: 14px;
-    color: rgb(0, 0, 0);
+/* Левая иконка */
+.icon-img-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -93,11 +65,41 @@
     transition: opacity 0.2s;
 }
 
+.icon-img-btn img {
+    display: block;
+    height: 55px;
+    width: auto;
+}
+
+.icon-img-btn:hover {
+    opacity: 0.7;
+}
+
+/* Центральная навигация */
+.nav-links {
+    display: flex;
+    gap: 35px;
+    justify-self: center;
+    align-self: center;
+}
+
+.nav-link {
+    font-family: 'BOWLER', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s;
+    text-decoration: none;
+}
+
 .nav-link:hover {
     opacity: 0.6;
 }
 
-/* Правый блок */
+/* Правая группа */
 .right-group {
     display: flex;
     align-items: center;
@@ -118,31 +120,22 @@
     transition: opacity 0.2s;
 }
 
-.social-icon:hover {
-    opacity: 0.7;
-}
-
 .social-icon img {
     display: block;
     height: 40px;
     width: auto;
 }
 
-.special-icon-wrapper {
-    margin-right: 0;
+.social-icon:hover {
+    opacity: 0.7;
 }
 
 .special-icon-btn {
-    margin-left: 10px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     transition: opacity 0.2s;
-}
-
-.special-icon-btn:hover {
-    opacity: 0.7;
 }
 
 .special-icon-btn img {
@@ -151,363 +144,408 @@
     width: auto;
 }
 
- 
-    /* ----- БЛОК КАРТОЧКИ ТОВАРА (корзина) ----- */
-    .cart-section {
-      position: absolute;
-      top: 160px; 
-      left: 50%;
-      transform: translateX(-50%);
-      width: 900px; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 50px;
-    }
-
-   .cart-items-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.special-icon-btn:hover {
+    opacity: 0.7;
 }
 
-    /* карточка товара*/
-    .product-card {
-      display: flex;
-      width: 700px; 
-      background: transparent;
-      align-items: flex-start;
-      gap: 50px;
-    }
+/* ===== КАРТОЧКИ ТОВАРА ===== */
+.cart-section {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+    order: 2; 
+}
 
-    /* Картинка товара */
+.cart-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.product-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+    gap: 30px;
+}
+
 .product-image {
-  width: 400px;
-  height: 409px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #f0f0f0; 
-  border-radius: 8px;
-  flex-shrink: 0;
+    width: 400px;
+    height: 409px;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    flex-shrink: 0;
 }
 
-/* Информация о товаре */
 .product-info {
-  color: white;
-  font-family: 'BOWLER', 'Arial Black', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 20px;
-  flex: 1;
-  min-width: 200px;
+    color: white;
+    font-family: 'BOWLER', 'Arial Black', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    flex: 1;
+    min-width: 200px;
 }
 
 .product-title {
-  font-size: 32px;
-  margin-bottom: 8px;
-  font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-/* Описание чая — между названием и ценой */
 .product-description {
-  font-size: 18px;
-  color: #cccccc;
-  margin-bottom: 12px;
-  line-height: 1.4;
-  font-family: 'BOWLER', 'Arial', sans-serif;
+    font-size: 18px;
+    color: #cccccc;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    font-family: 'BOWLER', 'Arial', sans-serif;
 }
 
 .product-desc {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffffff;
 }
 
 .product-controls {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .quantity-btn {
-  background: white;
-  border: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  font-size: 26px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-weight: bold;
-  color: black;
+    background: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
 }
 
 .quantity-value {
-  font-size: 28px;
-  min-width: 40px;
-  text-align: center;
-  color: white;
+    font-size: 28px;
+    min-width: 40px;
+    text-align: center;
+    color: white;
 }
 
 .delete-btn {
-  background: #152318;
-  border: none;
-  color: white;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-family: 'BOWLER', sans-serif;
-  font-size: 18px;
-  cursor: pointer;
+    background: #152318;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: 'BOWLER', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .delete-btn:hover {
-  background: #142410;
+    background: #0d1a10;
 }
 
-    /* ----- БЛОК КОНТАКТНЫЕ ДАННЫЕ ----- */
-    .contacts-block {
-      position: absolute;
-      transform: translateX(-50%);
-      left: 50%;
-      top: 1050px;
-      background-color: #8B8B8B;
-      padding: 0;
-      border-radius: 0px;
-      display: flex;
-      flex-direction: column;
-      width: 950px;
-      height: 532px;
-      overflow: visible;
-    }
+.empty-cart-message {
+    font-family: 'BOWLER', sans-serif;
+    font-size: 32px;
+    color: #888888;
+    text-align: center;
+    padding: 80px 20px;
+    width: 100%;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    border: 2px dashed #555;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+}
 
-    .contacts-title {
-      font-family: BOWLER;
-      font-size: 48px;
-      color: white;
-      margin: 0;
-      padding: 10px 0 10px 0;
-      padding-left: 61px;
-      padding-top: 23px;
-      line-height: 1;
-    }
+/* Пустая корзина */
+.empty-cart-message {
+    font-family: 'BOWLER', sans-serif;
+    font-size: 28px;
+    color: #999;
+    text-align: center;
+    padding: 60px 20px;
+    width: 100%;
+}
 
-    .contact-field {
-       width: calc(100% - 40px);
-      height: 83px;
-      background-color: #8B8B8B;
-      border: 2px solid #ccc;
-      margin: 15px 20px;
-      font-family: BOWLER;
-      font-size: 30px;
-      color: white;
-      padding-left: 20px;
-      display: flex;
-      align-items: center;
-      position: relative;
-    }
-
-    .contact-field input {
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      border: none;
-      outline: none;
-      font-family: BOWLER;
-      font-size: 30px;
-      color: white;
-      text-transform: uppercase;
-    }
-
-    .contact-field input::placeholder {
-      color: #ddd;
-      font-family: BOWLER;
-      opacity: 0.7;
-    }
-
-    /* ----- БЛОК АДРЕС ----- */
-    .address-block {
-      position: absolute;
-      transform: translateX(-50%);
-      left: 50%;
-      top: 1657px;
-      width: 509px;
-      background-color: #8B8B8B;
-      width: 950px;
-      height: 246px;
-      padding: 0;
-      overflow: visible;
-    }
+/* Общий стиль для заголовков с чёрной подложкой */
+.contacts-title,
+.address-title,
+.payment-title {
+    font-family: 'BOWLER', sans-serif;
+    font-size: 48px;
+    color: white;
+    background-color: #000000;
+    display: inline-block;
+    padding: 20px 40px;
+    margin: 0 0 30px 0px;  
+    position: relative;
+    left: 0;
+    line-height: 1;
+    letter-spacing: 1px;
+    border-radius: 25px;
+}
 
 
-    .address-title {
-      font-family: 'BOWLER', sans-serif;
-      font-size: 48px;
-      color: white;
-      padding-left: 61px;
-      padding-top: 23px;
-      margin: 0;
-      
-    }
 
-    .address-field {
-      width: calc(100% - 40px);
-      height: 83px;
-      background-color: #8B8B8B;
-      border: 2px solid #ccc;
-      font-family: 'BOWLER';
-      font-size: 30px;
-      padding-left: 20px;
-      display: flex;
-      align-items: center;
-      position: relative;
-    }
+/* ===== БЛОК КОНТАКТНЫЕ ДАННЫЕ ===== */
+.contacts-block {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 30px auto;
+    background-color: #8B8B8B;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 950px;
+    padding: 0 0 25px 0;
+    overflow: visible;
+    border-radius: 25px;
+    order: 3;  
+}
 
-    .address-field input {
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      border: none;
-      outline: none;
-      font-family: 'BOWLER';
-      font-size: 30px;
-      color: white;
-      padding-left: 20px;
-    }
 
-    .address-field input::placeholder {
-      color: #ddd;
-    }
+.contact-field {
+    width: calc(100% - 40px);
+    height: 83px;
+    background-color: #8B8B8B;
+    border: 2px solid #ccc;
+    margin: 15px 20px;
+    font-family: 'BOWLER', sans-serif;
+    font-size: 30px;
+    color: white;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+}
 
-    /* ----- БЛОК СПОСОБЫ ОПЛАТЫ ----- */
-    .payment-block {
-      position: absolute;
-      transform: translateX(-50%);
-      left: 50%;
-      top: 1943px;
-      width: 509px;
-      background-color: #8B8B8B;
-      width: 950px;
-      height: 246px;
-    }
+.contact-field input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'BOWLER', sans-serif;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+}
 
-    .payment-title {
-      font-family: 'BOWLER';
-      font-size: 48px;
-      color: white;
-      padding-left: 61px;
-      padding-top: 23px;
-      margin: 0;
-    }
+.contact-field input::placeholder {
+    color: #ddd;
+    font-family: 'BOWLER', sans-serif;
+    opacity: 0.7;
+}
 
-    .payment-options {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      padding: 20px 20px 30px 61px;
-    }
+/* ===== БЛОК АДРЕС ===== */
+.address-block {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 30px auto;
+    background-color: #8B8B8B;
+    width: 100%;
+    max-width: 950px;
+    padding: 0 0 25px 0;
+    overflow: visible;
+    border-radius: 25px;
+    order: 4;  
+}
 
-    .payment-option {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
 
-    .radio-circle {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      border: 2px solid white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      background: transparent;
-    }
+.address-field {
+    width: calc(100% - 40px);
+    height: 83px;
+    background-color: #8B8B8B;
+    border: 2px solid #ccc;
+    font-family: 'BOWLER', sans-serif;
+    font-size: 30px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 15px 20px;
+    border-radius: 8px;
+}
 
-    .radio-circle.checked::after {
-      content: "";
-      width: 18px;
-      height: 18px;
-      background: white;
-      border-radius: 50%;
-    }
+.address-field input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'BOWLER', sans-serif;
+    font-size: 30px;
+    color: white;
+}
 
-    .payment-text {
-      font-family: 'BOWLER';
-      font-size: 30px;
-      color: white;
-      text-transform: uppercase;
-    }
+.address-field input::placeholder {
+    color: #ddd;
+}
 
-    /* ----- ВАШ ЗАКАЗ ----- */
-    .order-summary {
-      position: absolute;
-      transform: translateX(-30%);
-      left: 30%;
-      top: 2225px;
-      font-family: 'BOWLER';
-      font-size: 40px;
-      color: white;
-    }
+/* ===== БЛОК СПОСОБЫ ОПЛАТЫ ===== */
+.payment-block {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 30px auto;
+    background-color: #8B8B8B;
+    width: 100%;
+    max-width: 950px;
+    padding: 0 0 25px 0;
+    border-radius: 25px;
+    order: 5;  
+}
 
-    .order-details {
-      position: absolute;
-      transform: translateX(-30%);
-      left: 30%;
-      top: 2305px;
-      font-family: 'BOWLER';
-      font-size: 40px;
-      color: white;
-      display: flex;
-      gap: 30px;
-    }
 
-    .total-block {
-      position: absolute;
-     transform: translateX(-70%);
-      left: 70%;
-      top: 2305px;
-      font-family: 'BOWLER';
-      font-size: 40px;
-      color: white;
-    }
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 20px 30px 61px;
+}
 
-    /* кнопка ОФОРМИТЬ */
-    .checkout-btn {
-      position: absolute;
-      transform: translateX(-70%);
-      left: 70%;
-      top: 2585px;
-      width: 440px;
-      height: 82px;
-      background-color: black;
-      border-radius: 41px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-family: 'BOWLER';
-      font-size: 48px;
-      cursor: pointer;
-      border: none;
-      text-transform: uppercase;
-    }
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
 
-    /* ----- ПОДВАЛ ----- */
-    .footer {
+.radio-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 4px solid rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    flex-shrink: 0;
+}
+
+.radio-circle.checked::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.payment-text {
+    font-family: 'BOWLER', sans-serif;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* ===== ВАШ ЗАКАЗ ===== */
+.order-summary {
+    position: absolute;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 30px auto;
+    font-family: 'BOWLER', sans-serif;
+    font-size: 40px;
+    color: white;
+    order: 6;  
+}
+
+.order-details {
+    position: relative;
+   top: auto;
+    left: auto;
+    transform: none;
+    margin: 30px auto;
+    font-family: 'BOWLER', sans-serif;
+    font-size: 40px;
+    color: white;
+    display: flex;
+    gap: 30px;
+    order: 7;  
+}
+
+.total-block {
+    position: relative;
+   top: auto;
+    left: auto;
+    transform: none;
+    margin: 30px auto;
+    font-family: 'BOWLER', sans-serif;
+    font-size: 40px;
+    color: white;
+    order: 6;  
+}
+
+/* ===== КНОПКА ОФОРМИТЬ ===== */
+.checkout-btn {
+    position: relative;
+   top: auto;
+    left: auto;
+    transform: none;
+    margin: 30px auto;
+    width: 440px;
+    max-width: 90%;
+    height: 82px;
+    background-color: black;
+    border-radius: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'BOWLER', sans-serif;
+    font-size: 48px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    transition: background 0.3s;
+    order: 8;  
+}
+
+.checkout-btn:hover {
+    background: #222;
+}
+
+/* ===== ПОДВАЛ ===== */
+.footer {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     padding: 60px 164px 80px 164px;
     margin-top: 175px;
     position: relative;
     z-index: 1;
+    order: 10;  
 }
 
 .footer-content {
@@ -517,10 +555,9 @@
     flex-wrap: wrap;
 }
 
-/* Brand section */
 .footer-brand {
-    flex: 0;
-    min-width: 400px;
+    flex: 1;
+    min-width: 250px;
 }
 
 .brand-title {
@@ -532,7 +569,6 @@
     letter-spacing: 1px;
 }
 
-/* Links columns */
 .footer-links {
     display: flex;
     gap: 80px;
@@ -540,7 +576,7 @@
 }
 
 .footer-column {
-    min-width: 150px;
+    min-width: 120px;
 }
 
 .column-title {
@@ -575,20 +611,64 @@
     text-decoration: underline;
 }
 
-/* Info section */
 .footer-info {
     flex: 1;
     min-width: 200px;
 }
 
-    /* скрываем стандартные браузерные элементы у input */
-    input {
-      border: none;
-      background: transparent;
-    }
+/* ===== ОБЩИЕ СТИЛИ ===== */
+input {
+    border: none;
+    background: transparent;
+}
 
-    /* утилиты */
-    .hidden {
-      display: none;
+.hidden {
+    display: none;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 1200px) {
+    .header {
+        padding: 30px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
-  </style>
+    
+    .right-group {
+        justify-self: center;
+    }
+    
+    .footer {
+        padding: 40px 60px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-image {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .contacts-block,
+    .address-block,
+    .payment-block {
+        width: 95%;
+    }
+    
+    .checkout-btn {
+        width: 90%;
+        font-size: 36px;
+    }
+    
+    .order-summary,
+    .order-details,
+    .total-block {
+        left: 5%;
+        transform: translateX(0);
+    }
+}
