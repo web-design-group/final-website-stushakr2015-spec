@@ -55,7 +55,7 @@
            интерпретируем как внутри карточки стрелки количества и кнопка удаления -->
     </div>
 
-    <!-- Блок КОНТ.ДАННЫЕ -->
+        <!-- Блок КОНТ.ДАННЫЕ -->
     <div class="contacts-block">
       <div class="contacts-title">КОНТ.ДАННЫЕ</div>
       <div class="contact-field">
@@ -150,8 +150,7 @@
         <div class="image-section"></div>
     </div>
 </footer>
-
-  <script>
+    <script>
     
     (function() {
       // Данные товаров в корзине (чай)
@@ -201,6 +200,7 @@
         updateTotals();
       };
 
+      
       // Рендер одной карточки
      function renderProductCard(product) {
   const cardDiv = document.createElement('div');
@@ -210,9 +210,7 @@
   
   cardDiv.innerHTML = `
     <!-- Картинка товара -->
-    <a href="carts.html">
     <div class="product-image" style="background-image: url('${product.image}');"></div>
-    </a>
     
     <!-- Информация о товаре -->
     <div class="product-info">
@@ -239,8 +237,6 @@
         cartContainer.innerHTML = '';
         products.forEach(p => renderProductCard(p));
         
-       
-        // убедимся, что кнопка не дублируется
         const existingBtn = document.getElementById('addProductBtn');
         if (existingBtn) existingBtn.remove();
         addMoreBtn.id = 'addProductBtn';
@@ -257,9 +253,7 @@
         circleElement.classList.add('checked');
       };
 
-      // Обработка placeholder'ов: при фокусе placeholder исчезает, текст вводится
-      // (уже реализовано через input placeholder, текст заменяется автоматически)
-
+  
       // Кнопка ОФОРМИТЬ (просто демонстрация)
       document.getElementById('checkoutButton').addEventListener('click', function() {
         const name = document.getElementById('nameInput').value || 'Не указано';
