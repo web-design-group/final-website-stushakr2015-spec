@@ -282,7 +282,7 @@ body {
 }
 
 .gradient-content h2 {
-    font-family: 'Fjalla One', 'Fet', sans-serif;
+    font-family: "Lobster", sans-serif;
     font-size: 48px;
     margin-bottom: 30px;
 }
@@ -1110,7 +1110,7 @@ body {
 }
 
 .brand-title {
-    font-family: 'Fet', 'Fjalla One', cursive;
+    font-family: "Lobster", sans-serif;
     font-size: 40px;
     color: #000000;
     margin: 10px 0;
