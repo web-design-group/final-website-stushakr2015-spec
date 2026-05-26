@@ -209,8 +209,9 @@ body {
 }
 
 .main-title {
-    font-family: 'Fjalla One', 'Fet', sans-serif;
+    font-family: "Pacifico", cursive;
     font-size: 95px;
+    font-style: normal;
     line-height: 1.05;
     color: black;
     text-transform: uppercase;
