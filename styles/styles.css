@@ -222,7 +222,7 @@ body {
 }
 
 .sub-text {
-    font-family: 'Bowlby One SC', 'BOWLER', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 16px;
     color: black;
     margin-top: 23px;
@@ -240,7 +240,7 @@ body {
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    font-family: 'Bowlby One SC', 'BOWLER', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 24px;
     color: white;
     display: flex;
@@ -288,7 +288,7 @@ body {
 }
 
 .gradient-content p {
-    font-family: 'Bowlby One SC', 'BOWLER', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 18px;
     line-height: 1.6;
     max-width: 800px;
@@ -303,7 +303,7 @@ body {
 }
 
 .section-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 64px;
     color: white;
     text-align: center;
@@ -417,7 +417,7 @@ body {
 }
 
 .service-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 40px;
     color: white;
     margin: 0 0 45px 0;
@@ -441,7 +441,7 @@ body {
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 24px;
     color: white;
     display: flex;
@@ -490,7 +490,7 @@ body {
 }
 
 .masterclass-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 40px;
     color: white;
     margin: 0 0 50px 0;
@@ -513,7 +513,7 @@ body {
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 24px;
     color: white;
     display: flex;
@@ -580,7 +580,7 @@ body {
 }
 
 .about-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 64px;
     color: white;
     margin: 10px 0 0 0;
@@ -597,7 +597,7 @@ body {
 
 /* ===== СЕКЦИЯ С ОТЗЫВАМИ ===== */
 .reviews-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 64px;
     color: white;
     text-align: center;
@@ -699,7 +699,7 @@ body {
 }
 
 .username {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 20px;
     color: black;
     text-align: center;
@@ -744,7 +744,7 @@ body {
 }
 
 .services-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 64px;
     color: white;
     text-align: center;
@@ -753,7 +753,7 @@ body {
 }
 
 .catalog-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 64px;
     color: white;
     text-align: center;
@@ -836,7 +836,7 @@ body {
 }
 
 .product-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 32px;
     color: white;
     margin-top: 30px;
@@ -855,7 +855,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 32px;
     color: white;
 }
@@ -898,7 +898,7 @@ body {
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 32px;
     color: black;
     text-align: center;
@@ -923,7 +923,7 @@ body {
 }
 
 .social-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 64px;
     color: white;
     text-align: center;
@@ -1005,7 +1005,7 @@ body {
     border: none;
     border-radius: 23px;
     cursor: pointer;
-    font-family: 'Bowler', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 40px;
     color: #ffffff;
     padding: 25px 40px;
@@ -1051,7 +1051,7 @@ body {
 }
 
 .contacts-title {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 45px;
     color: white;
     margin: 0 0 34px 0;
@@ -1060,7 +1060,7 @@ body {
 }
 
 .contacts-address {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 25px;
     color: white;
     margin: 0 0 40px 0;
@@ -1068,14 +1068,14 @@ body {
 }
 
 .contacts-phone {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 25px;
     color: white;
     margin: 0 0 34px 0;
 }
 
 .contacts-email {
-    font-family: 'BOWLER', 'Bowlby One SC', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 25px;
     color: white;
     margin: 0;
@@ -1129,7 +1129,7 @@ body {
 }
 
 .column-title {
-    font-family: 'BOWLER', 'Kalam', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 20px;
     color: #000000;
     margin-bottom: 20px;
