@@ -38,7 +38,7 @@ body {
     background-color: #FFFFFF;  
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 40px;
+    padding: 0 64px 0 40px;
     width: 100%;
     max-width: 100%; 
     position: relative;
