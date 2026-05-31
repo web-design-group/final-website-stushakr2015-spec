@@ -12,7 +12,7 @@ body {
         #2D2D2D 80%, 
         #32462F 95%, 
         #32462F 100%);
-    font-family: 'Bowler', cursive;
+    font-family: "Science Gothic", sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ body {
     width: 1440px;
     margin: 0 auto;
     background-color: #fff;
-    font-family: 'Bowler', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 14px;
     color: #000;
     position: relative;
@@ -83,7 +83,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    font-family: 'Bowler', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 18px;
     color: #000000;
     background: none;
@@ -133,7 +133,7 @@ body {
 
 /* Name input field */
 .name-input {
-    font-family: 'Bowler', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 40px;
     color: #000;
     background: none;
@@ -149,13 +149,13 @@ body {
 .name-input::placeholder {
     color: #999;
     font-size: 40px;
-    font-family: 'Bowler', cursive;
+    font-family: "Science Gothic", sans-serif;
 }
 
 /* Login button */
 .login-btn {
     margin-top: 0;
-    font-family: 'Bowler', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 48px;
     color: #000;
     margin-left: 250px;
@@ -198,7 +198,7 @@ body {
 }
 
 .btn-text {
-    font-family: 'Bowler', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 64px;
     color: #ffffff;
     white-space: nowrap;
@@ -239,7 +239,7 @@ body {
 }
 
 .brand-title {
-    font-family: 'Fet', 'Fjalla One', cursive;
+    font-family: "Lobster", sans-serif;
     font-size: 40px;
     color: #000000;
     margin: 10px 0;
@@ -259,7 +259,7 @@ body {
 }
 
 .column-title {
-    font-family: 'BOWLER', 'Kalam', cursive;
+    font-family: "Science Gothic", sans-serif;
     font-size: 20px;
     color: #000000;
     margin-bottom: 20px;
