@@ -24,7 +24,7 @@ body {
     margin: 0 auto;
     background-color: #fff;
     font-family: "Science Gothic", sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     color: #000;
     position: relative;
     overflow-x: hidden;
@@ -134,7 +134,7 @@ body {
 /* Name input field */
 .name-input {
     font-family: "Science Gothic", sans-serif;
-    font-size: 40px;
+    font-size: 100px;
     color: #000;
     background: none;
     border: 0 solid #000;
