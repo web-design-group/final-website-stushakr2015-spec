@@ -128,7 +128,7 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: -1;
     transition: opacity 0.2s;
 }
 
